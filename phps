@@ -17,7 +17,7 @@ case $1 in
         echo ""
         echo -e "It uses 8080 port by default or set option -r to use a random port."
         echo -e "Also run LiveReload if available."
-        echo -e "Reads the \e[35mphps\e[0m key in the \e[35mconfig\e[0m section in composer.json if it's configured."
+        echo -e "Reads the \e[35mphps\e[0m key in the \e[35mextra\e[0m section in composer.json if it's configured."
         echo ""
         echo -e "Go to https://github.com/4lb0/phps for more information."
         echo ""
@@ -35,7 +35,7 @@ case $1 in
     ;;
 esac
 
-PHPS_SERVER_RUN="php -S \"${PHPS_SERVER}:${PHPS_PORT}\" $(composer config phps --absolute --quiet 2> /dev/null || echo $PHPS_PARAMS)"
+PHPS_SERVER_RUN="php -S \"${PHPS_SERVER}:${PHPS_PORT}\" $(composer config extra.phps --absolute --quiet 2> /dev/null || echo $PHPS_PARAMS)"
 
 command -v livereload &> /dev/null || echo -e "\e[31mLivereload not detected.\e[0m To install it run:\n\nnpm install -g livereload\n"
 

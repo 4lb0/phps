@@ -28,11 +28,11 @@ Or download the [phps](/phps) file.
 
 **Save parameters in composer.json**
 
-You may add `[-t docroot] [router]` in a custom key  `phps` in the `config` section of your composer.json.
+You may add `[-t docroot] [router]` in a custom key  `phps` in the `extra` section of your composer.json.
 
 For example if you run it `phps -r -t public app.php` add the following configuration to your composer.json and then run it with just `php -r`
 
-    "config": {
+    "extra": {
       "phps": "-t public app.php"
     }
 
