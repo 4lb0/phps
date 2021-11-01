@@ -1,0 +1,18 @@
+{
+    "name": "4lb0/phps",
+    "description": "PHP Server: an improvement for the built-in server",
+    "type": "library",
+    "keywords": ["server","utility"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rodrigo 'Albo' Arce",
+            "email": "albo@pragmore.com"
+        }
+    ],
+    "require": {
+        "php": "^5.4",
+    },
+    "bin": ["phps"]
+}
+
