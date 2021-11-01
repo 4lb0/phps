@@ -13,7 +13,7 @@ case $1 in
     -h|--help)
         echo -e "An improvement for the built-in web server."
         echo -e "It uses 8080 port by default or set option -r to use a random port."
-        echo -e "It has support for LiveReload."
+        echo -e "Also run LiveReload if available."
         echo -e "Usage: $0 [-r] [-t docroot] [router]"
         echo -e "Options:"
         echo -e "-r, --random\tRun PHP and Livereload on random ports."

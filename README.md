@@ -2,7 +2,7 @@
 
 An improvement for the [built-in web server](https://www.php.net/manual/en/features.commandline.webserver.php). 
 It uses 8080 port by default or set option `-r` to use a random port.
-It has support for [LiveReload](https://www.npmjs.com/package/livereload).
+Also run [LiveReload](https://www.npmjs.com/package/livereload) if available.
 
 **Usage:**
 
