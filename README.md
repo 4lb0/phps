@@ -14,3 +14,8 @@ It has support for [LiveReload](https://www.npmjs.com/package/livereload).
 * `-t, --docroot`	Starting with a specific document root directory
 * `-h, --help`	Show this help
 
+**Set up**
+
+Use composer or download the [phps](/phps) file.
+
+    composer global require 4lb0/phps
