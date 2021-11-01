@@ -6,7 +6,7 @@ It has support for [LiveReload](https://www.npmjs.com/package/livereload).
 
 **Usage:**
 
-    ./phps [-r] [-t docroot] [router]
+    phps [-r] [-t docroot] [router]
 
 **Options:**
 
