@@ -1,5 +1,7 @@
 # PHP Server
 
+![Usage screenshot](https://user-images.githubusercontent.com/142173/139636053-e3d177a7-1cab-4012-bd17-a203869eaa5a.png)
+
 An improvement for the [built-in web server](https://www.php.net/manual/en/features.commandline.webserver.php). 
 It uses 8080 port by default or set option `-r` to use a random port.
 Also run [LiveReload](https://www.npmjs.com/package/livereload) if available.
