@@ -14,8 +14,16 @@ Also run [LiveReload](https://www.npmjs.com/package/livereload) if available.
 * `-t, --docroot`	Starting with a specific document root directory
 * `-h, --help`	Show this help
 
-**Set up**
+**Set up:**
 
-Use composer or download the [phps](/phps) file.
+Use composer 
 
     composer global require 4lb0/phps
+
+Or download the [phps](/phps) file.
+
+**Requirements:**
+
+* PHP version 5.4 or newer versions
+* Bash support
+* Optional: [LiveReload](https://www.npmjs.com/package/livereload)
