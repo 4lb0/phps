@@ -33,7 +33,11 @@ You may add `[-t docroot] [router]` in a custom key  `phps` in the `extra` secti
 For example if you run it `phps -r -t public app.php` add the following configuration to your composer.json and then run it with just `php -r`
 
     "extra": {
-      "phps": "-t public app.php"
+      "phps": 
+        "router": "app.php",
+        "docroot": "public/",
+        "config": "etc/php.ini",
+        "extraExtensions": "scss,phtml"
     }
 
 

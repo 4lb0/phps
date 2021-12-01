@@ -35,7 +35,20 @@ case $1 in
     ;;
 esac
 
-PHPS_SERVER_RUN="php -S \"${PHPS_SERVER}:${PHPS_PORT}\" $(composer config extra.phps --absolute --quiet 2> /dev/null || echo $PHPS_PARAMS)"
+config=$(composer config extra.phps --absolute --quiet 2> /dev/null || echo $PHPS_PARAMS)
+if [ "${config:0:1}" = "{" ]; then
+    config=""
+    router=$(composer config extra.phps.router --absolute --quiet 2> /dev/null)
+    docroot=$(composer config extra.phps.docroot --absolute --quiet 2> /dev/null)
+    extra_extensions=$(composer config extra.phps.extraExtensions --absolute --quiet 2> /dev/null)
+    php_config=$(composer config extra.phps.config --absolute --quiet 2> /dev/null)
+    [[ ! -z "$extra_extensions" ]] && PHPS_LIVERELOAD="$PHPS_LIVERELOAD -ee \"$extra_extensions\""
+    [[ ! -z "$docroot" ]] && config="$config --docroot=$docroot"
+    [[ ! -z "$php_config" ]] && config="$config --php-ini=$php_config"
+    config="$config $router"
+fi
+
+PHPS_SERVER_RUN="php -S \"${PHPS_SERVER}:${PHPS_PORT}\" $config"
 
 command -v livereload &> /dev/null || echo -e "\e[31mLivereload not detected.\e[0m To install it run:\n\nnpm install -g livereload\n"
 
